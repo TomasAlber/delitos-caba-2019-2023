@@ -1,4 +1,4 @@
-# Trabajo Final de Ciencia de Datos para Economía y Negocios - 1er Cuatrimestre 2025
+# Trabajo Final de Ciencia de Datos para Economía y Negocios
 Análisis de los delitos en la Ciudad Autonóma de Buenos Aires entre 2019 y 2023
 
 ## Repositorio
