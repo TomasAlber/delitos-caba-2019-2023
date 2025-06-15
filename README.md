@@ -1,5 +1,5 @@
 ## 📌 Trabajo Final de Ciencia de Datos para Economía y Negocios
-Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el período 2019 y 2023.
+Este repositorio contiene el **análisis integral** de los datos de delitos reportados en la Ciudad de Buenos Aires entre 2019 y 2023. Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
 
 ## 🎓 Alumno
 - **Nombre completo**: Brandon Tomás Alberganti
@@ -28,13 +28,7 @@ Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el p
 - **Control de versiones**: Git + GitHub.
 
 ## 🔍 ¿Cómo navegar el repositorio?
-/data # Datos originales y procesados (CSV/JSON/XLSX)
-/notebooks # Jupyter/R Notebooks con:
-│── 1_EDA.ipynb # Análisis exploratorio
-│── 2_Visualizations.ipynb # Generación de gráficos
-│── 3_Modeling.ipynb # Algoritmos de ML
-/src # Scripts reutilizables (Python/R)
-/output # Resultados finales:
-│── /presentation # Presentación PPTX/PDF y materiales
-│── /graphs # Gráficos exportados (PNG/SVG)
-│── /reports # Informes técnicos (opcional)
+
+- Los códigos están organizados en carpetas por etapa (/raw, /input, /output).
+
+- La presentación final se encuentra en /output/presentacion.
