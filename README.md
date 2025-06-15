@@ -2,9 +2,9 @@
 Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el período 2019 y 2023.
 
 ## 🎓 Alumno
-**Nombre completo**: Brandon Tomás Alberganti
+- **Nombre completo**: Brandon Tomás Alberganti
 
-**Número de registro**: 892.796
+- **Número de registro**: 892.796
 
 ## 🗂️ Estructura del repositorio
 
@@ -27,7 +27,7 @@ Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el p
 
 - **Control de versiones**: Git + GitHub.
 
-##🔍 ¿Cómo navegar el repositorio?
+## 🔍 ¿Cómo navegar el repositorio?
 - Los códigos están organizados en carpetas por etapa (/data, /notebooks, /models).
 
 - La presentación final se encuentra en /output/presentacion.
