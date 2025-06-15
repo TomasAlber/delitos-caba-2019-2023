@@ -4,10 +4,16 @@ Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el p
 ### 🎓 Alumno
 Tomás Alberganti - 892.796
 
-### 🖥️ Repositorio
-Este repositorio de Github tiene por objetivo almacenar la información  los códigos 
+## 🗂️ Estructura del repositorio
 
-### 📊 Contenido  
-- Exploratory Data Analysis (EDA)  
-- Visualizaciones interactivas (Plotly, Folium)  
-- Modelos de clustering y predicción  
+📄 Presentación final: Resumen visual en formato PPTX/PDF.
+
+📂 Datos: Bases originales y procesadas (CSV, JSON o formatos compatibles).
+
+📊 Análisis Exploratorio (EDA): Jupyter Notebooks o scripts (Python/R) con limpieza, estadísticas descriptivas y gráficos.
+
+🤖 Modelos: Implementación de algoritmos (clustering, series temporales, etc.).
+
+📈 Visualizaciones: Gráficos interactivos (Plotly, Tableau) o estáticos (Matplotlib, Seaborn).
+
+📝 Informe técnico: Conclusiones, metodología y hallazgos (opcional en Markdown/PDF).
