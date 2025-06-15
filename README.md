@@ -30,11 +30,11 @@ Este repositorio de Github tiene como objetivo almacenar el **análisis integral
 
 ## 🔍 ¿Cómo navegar el repositorio?
 
-- Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output`, `/scripts`.
+- Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output` y `/scripts`.
 
-- La presentación final se encuentra en `/presentation`.
+- La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-### 🔍 Acceso directo a los principales archivos:
+### 📑 Acceso directo a los principales archivos:
 
 - [Información inicial](/raw)
   
