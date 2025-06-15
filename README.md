@@ -34,7 +34,7 @@ Este repositorio de Github almacena el **análisis integral** de la base de dato
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-## 📑 Acceso directo a los principales archivos:
+## 📑 Accesos directos a los principales archivos
 
 - [Información inicial](/raw)
   
