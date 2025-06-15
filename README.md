@@ -30,7 +30,14 @@ Este repositorio contiene el **análisis integral** de los datos de delitos repo
 
 ## 🔍 ¿Cómo navegar el repositorio?
 
-- Los códigos están organizados en carpetas por etapa ( `/raw` , `/input` , `/output`).
+- Los códigos están organizados en carpetas por etapa (`/raw` , `/input` , `/output`, `/scripts`).
 
-- La presentación final se encuentra en /output/presentacion.
+- La presentación final se encuentra en `/presentation`.
 
+### 🔍 Acceso directo a los principales archivos:
+
+- [Información inicial](/raw)
+- [Datos procesados](/input)
+- [Resultados generados](/output)
+- [Scripts de Procesamiento](/src)
+- [Presentación final](/presentation)
