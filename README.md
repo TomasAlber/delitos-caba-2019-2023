@@ -2,7 +2,9 @@
 Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el período 2019 y 2023.
 
 ## 🎓 Alumno
-Brandon Tomás Alberganti - 892.796
+**Nombre completo**: Brandon Tomás Alberganti
+
+**Número de registro**: 892.796
 
 ## 🗂️ Estructura del repositorio
 
