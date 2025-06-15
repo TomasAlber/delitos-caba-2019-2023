@@ -48,7 +48,7 @@ Este repositorio de Github contiene el **análisis integral** de los datos de de
 
 ## 📜 Fuente de Datos
 
-La información utilizada en este trabajo fue obtenida del **Ministerio de Seguridad y Justicia de la Ciudad Autónoma de Buenos Aires**, a través de su portal de datos públicos. Los datos corresponden a registros de delitos reportados entre los años 2019 y 2023.
+La información utilizada para la realización de este trabajo fue obtenida del **Ministerio de Seguridad y Justicia de la Ciudad Autónoma de Buenos Aires**, a través de su portal de datos públicos. Los datos corresponden a registros de delitos reportados entre los años 2019 y 2023.
 
-🔗 **Enlace oficial para la descarga de los datos**:  
+🔗 **Enlace al sitio oficial para la descarga de la información**:  
 [Buenos Aires Data - GCBA](https://data.buenosaires.gob.ar/dataset/delitos)
