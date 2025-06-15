@@ -34,7 +34,7 @@ Este repositorio de Github tiene como objetivo almacenar el **análisis integral
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-### 📑 Acceso directo a los principales archivos:
+## 📑 Acceso directo a los principales archivos:
 
 - [Información inicial](/raw)
   
@@ -42,6 +42,13 @@ Este repositorio de Github tiene como objetivo almacenar el **análisis integral
   
 - [Resultados generados](/output)
 
-- [Scripts de Procesamiento](/scripts)
+- [Scripts de procesamiento](/scripts)
 
 - [Presentación final](/presentation)
+
+## 📜 Fuente de Datos
+
+La información utilizada en este trabajo fue obtenida del **Ministerio de Seguridad y Justicia de la Ciudad Autónoma de Buenos Aires**, a través de su portal de datos públicos. Los datos corresponden a registros de delitos reportados entre los años 2019 y 2023.
+
+🔗 **Enlace oficial para descarga de datos**:  
+[Buenos Aires Data - GCBA](https://data.buenosaires.gob.ar/dataset/delitos)
