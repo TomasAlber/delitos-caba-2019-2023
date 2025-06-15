@@ -19,3 +19,15 @@ Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el p
 - 📈 **Visualizaciones**: Gráficos interactivos (Plotly, Tableau) o estáticos (Matplotlib, Seaborn).
 
 - 📝 **Informe técnico**: Conclusiones, metodología y hallazgos (opcional en Markdown/PDF).
+
+## 🛠️ Herramientas utilizadas
+- **Lenguajes**: Python (pandas, scikit-learn) o R (tidyverse, caret).
+
+- **Visualización**: Power BI/Tableau (opcional), Plotly, Folium (mapas).
+
+- **Control de versiones**: Git + GitHub.
+
+##🔍 ¿Cómo navegar el repositorio?
+- Los códigos están organizados en carpetas por etapa (/data, /notebooks, /models).
+
+- La presentación final se encuentra en /output/presentacion.
