@@ -28,6 +28,13 @@ Análisis de datos de los delitos en la Ciudad Autonóma de Buenos Aires en el p
 - **Control de versiones**: Git + GitHub.
 
 ## 🔍 ¿Cómo navegar el repositorio?
-- Los códigos están organizados en carpetas por etapa (/data, /notebooks, /models).
-
-- La presentación final se encuentra en /output/presentacion.
+/data # Datos originales y procesados (CSV/JSON/XLSX)
+/notebooks # Jupyter/R Notebooks con:
+│── 1_EDA.ipynb # Análisis exploratorio
+│── 2_Visualizations.ipynb # Generación de gráficos
+│── 3_Modeling.ipynb # Algoritmos de ML
+/src # Scripts reutilizables (Python/R)
+/output # Resultados finales:
+│── /presentation # Presentación PPTX/PDF y materiales
+│── /graphs # Gráficos exportados (PNG/SVG)
+│── /reports # Informes técnicos (opcional)
