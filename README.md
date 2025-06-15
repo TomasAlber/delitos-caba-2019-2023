@@ -1,5 +1,5 @@
 ## 📌 Trabajo Final de Ciencia de Datos para Economía y Negocios
-Este repositorio contiene el **análisis integral** de los datos de delitos reportados en la Ciudad de Buenos Aires entre 2019 y 2023. Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
+Este repositorio de Github tiene como objetivo almacenar el **análisis integral** de los datos de delitos reportados en la Ciudad de Buenos Aires entre 2019 y 2023. Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
 
 ## 🎓 Alumno
 - **Nombre completo**: Brandon Tomás Alberganti
@@ -30,14 +30,18 @@ Este repositorio contiene el **análisis integral** de los datos de delitos repo
 
 ## 🔍 ¿Cómo navegar el repositorio?
 
-- Los códigos están organizados en carpetas por etapa (`/raw` , `/input` , `/output`, `/scripts`).
+- Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output`, `/scripts`.
 
 - La presentación final se encuentra en `/presentation`.
 
 ### 🔍 Acceso directo a los principales archivos:
 
 - [Información inicial](/raw)
+  
 - [Datos procesados](/input)
+  
 - [Resultados generados](/output)
-- [Scripts de Procesamiento](/src)
+
+- [Scripts de Procesamiento](/scripts)
+
 - [Presentación final](/presentation)
