@@ -1,5 +1,7 @@
 ## 📌 Trabajo Final de Ciencia de Datos para Economía y Negocios
-Este repositorio de Github almacena el **análisis integral** de la base de datos correspondiente a los delitos reportados en la Ciudad de Buenos Aires en el período 2019 y 2023 como parte del **Trabajo Final** de la materia **Ciencia de Datos para Economía y Negocios** de la Facultad de Ciencias Económicas de la Universidad de Buenos. Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
+Este repositorio de Github almacena el **análisis integral** de la base de datos correspondiente a los delitos reportados en la Ciudad de Buenos Aires en el período 2019 y 2023 como parte del **Trabajo Final** de la materia **Ciencia de Datos para Economía y Negocios** de la Facultad de Ciencias Económicas de la Universidad de Buenos. 
+
+Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
 
 ## 🎓 Alumno
 - **Nombre completo**: Brandon Tomás Alberganti
