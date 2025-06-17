@@ -38,9 +38,9 @@ Su objetivo es documentar el proceso completo, desde la exploración inicial has
 
 ## 📑 Acceso directo a la documentación principal
 
-- [Información inicial](/raw)
+- [Base de datos original](/raw)
   
-- [Datos procesados](/input)
+- [Base de datos procesada](/input)
   
 - [Resultados generados](/output)
 
