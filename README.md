@@ -36,7 +36,7 @@ Su objetivo es documentar el proceso completo, desde la exploración inicial has
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-## 📑 Accesos directos a los principales archivos
+## 📑 Acceso directo a la documentación principal
 
 - [Información inicial](/raw)
   
