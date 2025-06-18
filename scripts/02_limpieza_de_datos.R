@@ -2,14 +2,16 @@
 ## Facultad de Ciencias Económicas - Universidad de Buenos Aires
 # Alumno: Tomas Alberganti
 # Número de Registro: 892.796
+# Profesor: Nicolas Sidicaro
 
-# Script para combinar archivos anuales de delitos en CABA (2019-2023)
+### Script de limpieza de archivos previamente descargados
+## En primer lugar, dado que hemos descargado la información del período 2019-2023 en cinco archivos distintos (uno por cada año), vamos a consolidar en un único archivo la información que comprende dicho período para trabajar con mayor facilidad.
 
-# 1. Configuración inicial -----------------------------------------------------
+# 1. Descarga de librerias requeridas -----------------------------------------------------
 library(tidyverse)
 library(readr)
 
-# Definir rutas
+# Definición de rutas
 ruta_base <- "C:/Users/Tomas/Documents/GitHub/delitos-caba-2019-2023"
 ruta_raw <- file.path(ruta_base, "raw")
 ruta_input <- file.path(ruta_base, "input")
@@ -19,7 +21,7 @@ if (!dir.exists(ruta_input)) {
   dir.create(ruta_input, recursive = TRUE)
 }
 
-# 2. Listar y cargar archivos --------------------------------------------------
+# 2. Carga de archivos --------------------------------------------------
 archivos <- c(
   "delitos_2019.csv",
   "delitos_2020.csv",
@@ -104,3 +106,40 @@ conteo_registros <- map_int(archivos, ~{
 print(data.frame(Archivo = archivos, Registros = conteo_registros))
 cat("Total registros esperados:", sum(conteo_registros), "\n")
 cat("Total registros obtenidos:", nrow(delitos_completo), "\n")
+
+## En segundo lugar, vamos a estandarizar algunos formatos de nombres para que la información sea lo más homogénea posible y así poder contar con datos más precisos.
+
+# 1. Correción de nombres de los días de la semana -----------------------------
+
+delitos <- read_csv(file.path(ruta_input, "delitos_2019_2023.csv"))
+
+delitos <- delitos %>%
+     mutate(dia = case_when(
+       dia == "LUN" ~ "LUNES",
+       dia == "MAR" ~ "MARTES",
+       dia == "MIE" ~ "MIERCOLES",
+       dia == "JUE" ~ "JUEVES",
+       dia == "VIE" ~ "VIERNES",
+       dia == "SAB" ~ "SABADO",
+       dia == "DOM" ~ "DOMINGO",
+       TRUE ~ dia  # Mantener otros valores sin cambios
+     ))
+
+# Guardar datos modificado
+write_csv(delitos, file.path(ruta_input, "delitos_2019_2023.csv"))
+
+# 2. Estandarización de los nombres de barrios  --------------------------------
+
+barrios <- read_csv(file.path(ruta_input, "delitos_2019_2023.csv"))
+
+barrios <- barrios %>% 
+  mutate(barrio = case_when(
+    barrio == "NUÃ‘EZ" ~ "NUNEZ",
+    barrio == "CONTITUCION" ~ "CONSTITUCION",
+    barrio == "VILLA GENERAL MITRE" ~ "VILLA GRAL. MITRE",
+    barrio == "VILLA Â´PUEYRREDON" ~ "VILLA PUEYRREDON",
+    TRUE ~ barrio  # Mantener otros valores sin cambios
+  ))
+
+# Guardar datos modificado
+write_csv(barrios, file.path(ruta_input, "delitos_2019_2023.csv"))
