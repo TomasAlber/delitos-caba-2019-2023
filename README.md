@@ -62,7 +62,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🎓 Responsable
 **Brandon Tomás Alberganti**  
-📝 Nro. Registro: 892.796  
+📝 Nro. de Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
 🏛️ Facultad de Ciencias Económicas - Universidad de Buenos Aires
 
