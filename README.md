@@ -6,25 +6,31 @@ Este repositorio documenta el **análisis integral** de los delitos reportados e
 Incluye el proceso completo desde EDA hasta modelos predictivos, con visualizaciones interactivas y presentación ejecutiva.
 
 ## 📑 Fuente de Datos
-Datos oficiales proporcionados por la **Subsecretaría de Investigación y Estadística Criminal** (GCBA):
+La información utilizada para la realización de este trabajo fue obtenida a través del portal de datos públicos de la **Subsecretaría de Investigación y Estadística Criminal** del **Ministerio de Seguridad de la Ciudad Autónoma de Buenos Aires**:
 
 🔗 [Portal Buenos Aires Data - Delitos](https://data.buenosaires.gob.ar/dataset/delitos)  
+
 📆 Período cubierto: Enero 2019 - Diciembre 2023
 
 ## 📐 Estructura del Dataset
 | Campo          | Tipo     | Descripción |
 |----------------|----------|-------------|
-| **id_mapa**    | integer  | ID único |
-| **fecha**      | date     | Fecha (YYYY-MM-DD) |
-| **franja**     | integer  | Hora (0-23) |
-| **tipo_delito**| string   | Robo/Hurto |
-| **subtipo**    | string   | Clasificación específica |
-| **uso_arma**   | boolean  | SI/NO |
-| **barrio**     | string   | Ubicación geográfica |
+| **id_mapa**    | integer  | ID único del registro |
+| **anio**       | date     | Año del evento |
+| **mes**        | string   | Mes del evento |
+| **dia**        | string   | Día de la semana |
+| **fecha**      | date     | Fecha completa (YYYY-MM-DD) |
+| **franja**     | integer  | Hora del día (0-23) |
+| **tipo_delito1**| string  | Tipo principal (Robo/Hurto) |
+| **subtipo_delito**| string | Variante específica |
+| **uso_arma**   | boolean  | ¿Se usó arma? (SI/NO) |
+| **uso_moto**   | boolean  | ¿Se usó moto? (SI/NO) |
+| **barrio**     | string   | Barrio de ocurrencia |
 | **comuna**     | integer  | Comuna (1-15) |
-| ...            | ...      | ... |
+| **latitud**    | string   | Coordenada latitudinal |
+| **longitud**   | string   | Coordenada longitudinal |
+| **cantidad**   | integer  | Conteo de eventos (normalmente 1) |
 
-*(Tabla completa en [documentación técnica](/docs/data_dictionary.md))*
 
 ## 🗂️ Estructura del repositorio
 
@@ -92,31 +98,3 @@ Datos oficiales proporcionados por la **Subsecretaría de Investigación y Estad
 - [Scripts de procesamiento](/scripts)
 
 - [Presentación final](/presentation)
-
-## 📐 Estructura del dataset
-
-| Campo          | Tipo     | Descripción |
-|----------------|----------|-------------|
-| **id_mapa**    | integer  | ID único del registro |
-| **anio**       | date     | Año del evento |
-| **mes**        | string   | Mes del evento |
-| **dia**        | string   | Día de la semana |
-| **fecha**      | date     | Fecha completa (YYYY-MM-DD) |
-| **franja**     | integer  | Hora del día (0-23) |
-| **tipo_delito1**| string  | Tipo principal (Robo/Hurto) |
-| **subtipo_delito**| string | Variante específica |
-| **uso_arma**   | boolean  | ¿Se usó arma? (SI/NO) |
-| **uso_moto**   | boolean  | ¿Se usó moto? (SI/NO) |
-| **barrio**     | string   | Barrio de ocurrencia |
-| **comuna**     | integer  | Comuna (1-15) |
-| **latitud**    | string   | Coordenada latitudinal |
-| **longitud**   | string   | Coordenada longitudinal |
-| **cantidad**   | integer  | Conteo de eventos (normalmente 1) |
-
-
-## 📜 Fuente de Datos
-
-La información utilizada para la realización de este trabajo fue obtenida a través del portal de datos públicos de la **Subsecretaría de Investigación y Estadística Criminal** del **Ministerio de Seguridad de la Ciudad Autónoma de Buenos Aires**. Los datos corresponden a los registros de delitos reportados entre los años 2019 y 2023.
-
-🔗 **Enlace al sitio oficial para la descarga de la información**:  
-[Buenos Aires Data - GCBA](https://data.buenosaires.gob.ar/dataset/delitos)
