@@ -87,3 +87,22 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - [Scripts de Procesamiento](/scripts)
 
 - [Presentación Final](/presentation)
+
+## 📐 Estructura del Dataset
+| Campo          | Tipo     | Descripción |
+|----------------|----------|-------------|
+| **id_mapa**    | integer  | Identificador único |
+| **anio**       | date     | Año del evento |
+| **mes**        | string   | Mes del evento |
+| **dia**        | string   | Día de la semana en que ocurrió el evento |
+| **fecha**      | date     | Fecha exacta del evento (YYYY-MM-DD) |
+| **franja**     | integer  | Franja horario en la que ocurrió el evento (0-23) |
+| **tipo**| string  | Clasificación del tipo de delito |
+| **subtipo**| string | Subtipo del delito, más específico |
+| **uso_arma**   | boolean  | Indicador de uso de arma (SI/NO) |
+| **uso_moto**   | boolean  | Indicador de uso de moto en el evento (SI/NO) |
+| **barrio**     | string   | Barrio de ocurrencia del evento |
+| **comuna**     | integer  | Comuna de ocurrencia del evento (1-15) |
+| **latitud**    | string   | Latitud geográfica donde ocurrió el evento |
+| **longitud**   | string   | Longitud geográfica donde ocurrió el evento |
+| **cantidad**   | integer  | Número de eventos registrados en esa ubicación y fecha |
