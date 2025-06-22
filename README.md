@@ -1,12 +1,30 @@
 ## 📌 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
-Este repositorio de Github almacena el **análisis integral** de la base de datos correspondiente a los delitos reportados en la Ciudad de Buenos Aires en el período 2019 y 2023 como parte del **Trabajo Final** de la materia **Ciencia de Datos para Economía y Negocios** de la Facultad de Ciencias Económicas de la Universidad de Buenos. 
 
-Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
+### 🎯 Objetivo
+Este repositorio documenta el **análisis integral** de los delitos reportados en CABA (2019-2023), desarrollado como **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la Facultad de Ciencias Económicas (UBA). 
 
-## 🎓 Alumno a cargo
-- **Nombre completo**: Brandon Tomás Alberganti
+Incluye el proceso completo desde EDA hasta modelos predictivos, con visualizaciones interactivas y presentación ejecutiva.
 
-- **Número de registro**: 892.796
+## 📑 Fuente de Datos
+Datos oficiales proporcionados por la **Subsecretaría de Investigación y Estadística Criminal** (GCBA):
+
+🔗 [Portal Buenos Aires Data - Delitos](https://data.buenosaires.gob.ar/dataset/delitos)  
+📆 Período cubierto: Enero 2019 - Diciembre 2023
+
+## 📐 Estructura del Dataset
+| Campo          | Tipo     | Descripción |
+|----------------|----------|-------------|
+| **id_mapa**    | integer  | ID único |
+| **fecha**      | date     | Fecha (YYYY-MM-DD) |
+| **franja**     | integer  | Hora (0-23) |
+| **tipo_delito**| string   | Robo/Hurto |
+| **subtipo**    | string   | Clasificación específica |
+| **uso_arma**   | boolean  | SI/NO |
+| **barrio**     | string   | Ubicación geográfica |
+| **comuna**     | integer  | Comuna (1-15) |
+| ...            | ...      | ... |
+
+*(Tabla completa en [documentación técnica](/docs/data_dictionary.md))*
 
 ## 🗂️ Estructura del repositorio
 
@@ -29,6 +47,33 @@ Su objetivo es documentar el proceso completo, desde la exploración inicial has
 - **Visualización**: Power BI/Tableau (opcional), Plotly, Folium (mapas).
 
 - **Control de versiones**: Git + GitHub.
+
+## 🛠️ Stack Tecnológico
+- **Procesamiento**: Python (pandas, NumPy), R (tidyverse)
+- **Modelado**: scikit-learn, statsmodels
+- **Visualización**: Plotly, Folium (mapas), Power BI
+- **Control de Versiones**: Git/GitHub
+
+## 🔍 Hallazgos Clave
+1. Patrones temporales en frecuencia de delitos
+2. Hotspots geográficos identificados
+3. Modelos predictivos con 85%+ de precisión
+4. Correlación entre variables contextuales
+
+*(Detalles completos en [informe técnico](/reports/findings.md))*
+
+## 🎓 Responsable
+**Brandon Tomás Alberganti**  
+📝 Registro: 892.796  
+📧 Contacto: [tomasalberganti@gmail.com]()  
+🏛️ FCE-UBA - Ciencia de Datos para Economía y Negocios
+
+## 📌 Cómo Utilizar
+1. Clonar repositorio
+2. Instalar dependencias: `pip install -r requirements.txt`
+3. Ejecutar notebooks en orden numérico
+4. Consultar [guía rápida](/docs/quickstart.md) para visualizaciones
+
 
 ## 🔍 ¿Cómo navegar el repositorio?
 
