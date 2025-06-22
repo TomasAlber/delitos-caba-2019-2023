@@ -27,12 +27,12 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 | **uso_moto**   | boolean  | Indicador de uso de moto en el evento (SI/NO) |
 | **barrio**     | string   | Barrio de ocurrencia del evento |
 | **comuna**     | integer  | Comuna de ocurrencia del evento (1-15) |
-| **latitud**    | string   | Latitud geográfica donde ocurrió el evento |
-| **longitud**   | string   | Longitud geográfica donde ocurrió el evento |
-| **cantidad**   | integer  | Número de eventos registrados en esa ubicación y fecha |
+| ...            | ...      | ... |
+
+*(Tabla completa en [documentación técnica](https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42))*
 
 
-## 🗂️ Estructura del repositorio
+## 🗂️ Estructura del Repositorio
 
 - 📄 **Presentación final**: Resumen visual en formato PPTX/PDF.
 
@@ -82,7 +82,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 📑 Acceso directo a la documentación principal
 
-- [Base de datos original](/raw)
+- [Dataset original](/raw)
   
 - [Base de datos procesada](/input)
   
