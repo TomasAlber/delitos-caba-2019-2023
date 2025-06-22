@@ -63,7 +63,7 @@ leer_y_estandarizar <- function(archivo) {
   return(datos)
 }
 
-# 4. Combinar datos ------------------------------------------------------------
+# 4. Combinación de datos ------------------------------------------------------------
 # Leer y combinar todos los archivos con manejo de errores
 delitos_completo <- map(archivos, ~{
   tryCatch(
@@ -77,69 +77,133 @@ delitos_completo <- map(archivos, ~{
   compact() %>%  # Eliminar elementos NULL (archivos con errores)
   reduce(bind_rows)  # Combinar todos los data frames
 
-# 5. Verificación y guardado ---------------------------------------------------
-cat("\nResumen de datos combinados:\n")
-cat("--------------------------\n")
-cat("Total de registros:", nrow(delitos_completo), "\n")
-cat("Columnas:", names(delitos_completo), "\n")
+# 5. Guardado del dataset ---------------------------------------------------
 
-# Mostrar estructura de los datos
-cat("\nEstructura de los datos combinados:\n")
-str(delitos_completo)
-
-# Guardar archivo combinado
 output_file <- file.path(ruta_input, "delitos_2019_2023.csv")
 write_csv(delitos_completo, output_file)
 
-cat("\nArchivo combinado guardado en:", output_file, "\n")
-
-# 6. Validación final ----------------------------------------------------------
-cat("\nValidación final:\n")
-cat("Conteo de registros por archivo original:\n")
-conteo_registros <- map_int(archivos, ~{
-  if (file.exists(file.path(ruta_raw, .x))) {
-    nrow(leer_y_estandarizar(.x))
-  } else {
-    0
-  }
-})
-print(data.frame(Archivo = archivos, Registros = conteo_registros))
-cat("Total registros esperados:", sum(conteo_registros), "\n")
-cat("Total registros obtenidos:", nrow(delitos_completo), "\n")
 
 ## En segundo lugar, vamos a estandarizar algunos formatos de nombres para que la información sea lo más homogénea posible y así poder contar con datos más precisos.
 
-# 1. Correción de nombres de los días de la semana -----------------------------
-
 delitos <- read_csv(file.path(ruta_input, "delitos_2019_2023.csv"))
 
-delitos <- delitos %>%
-     mutate(dia = case_when(
-       dia == "LUN" ~ "LUNES",
-       dia == "MAR" ~ "MARTES",
-       dia == "MIE" ~ "MIERCOLES",
-       dia == "JUE" ~ "JUEVES",
-       dia == "VIE" ~ "VIERNES",
-       dia == "SAB" ~ "SABADO",
-       dia == "DOM" ~ "DOMINGO",
-       TRUE ~ dia  # Mantener otros valores sin cambios
-     ))
-
-# Guardar datos modificado
-write_csv(delitos, file.path(ruta_input, "delitos_2019_2023.csv"))
-
-# 2. Estandarización de los nombres de barrios  --------------------------------
-
-barrios <- read_csv(file.path(ruta_input, "delitos_2019_2023.csv"))
-
-barrios <- barrios %>% 
+delitos_estandarizado <- delitos %>%
+  # Corrección de nombres de días de la semana
+  mutate(dia = case_when(
+    dia == "LUN" ~ "LUNES",
+    dia == "MAR" ~ "MARTES",
+    dia == "MIE" ~ "MIERCOLES",
+    dia == "JUE" ~ "JUEVES",
+    dia == "VIE" ~ "VIERNES",
+    dia == "SAB" ~ "SABADO",
+    dia == "DOM" ~ "DOMINGO",
+    TRUE ~ dia  # Mantener otros valores sin cambios
+  )) %>%
+  
+  # Estandarización de nombres de barrios
   mutate(barrio = case_when(
-    barrio == "NUÃ‘EZ" ~ "NUNEZ",
-    barrio == "CONTITUCION" ~ "CONSTITUCION",
+    barrio == "NUÑEZ" ~ "NUNEZ",
+    barrio == "CONTITUCIÓN" ~ "CONSTITUCION",
     barrio == "VILLA GENERAL MITRE" ~ "VILLA GRAL. MITRE",
-    barrio == "VILLA Â´PUEYRREDON" ~ "VILLA PUEYRREDON",
+    barrio == "VILLA ´PUEYRREDON" ~ "VILLA PUEYRREDON",
+    barrio == "BOCA" ~ "LA BOCA",
     TRUE ~ barrio  # Mantener otros valores sin cambios
-  ))
+  )) %>%
+  
+  # Estandarización de números de comuna
+  mutate(
+    comuna = comuna %>%
+      str_replace_all("CC-| NORTE| SUR", "") %>%
+      str_trim() %>%
+      as.integer()
+  ) %>%
+  
+  # Modificación del formato de la columna franja a número
+  mutate(
+    franja = as.numeric(franja) 
+  ) %>% 
+  
+  # Eliminación de datos con información erróneamente incompleta
+  filter(
+    !barrio %in% c("0", "NULL", "NO ESPECIFICADA", "SD", "Sin geo"),  # Valores específicos
+    !is.na(barrio),                                  # Eliminar NA
+    barrio != "",                                    # Eliminar strings vacíos
+  ) %>% 
+  
+  # Eliminación de barrios que no corresponden a CABA
+  filter(
+    !barrio %in% c("AV BOEDO", "BERNAL", "BANFIELD OESTE", "CASEROS", 
+    "DOCK SUD", "RODRIGO BUENO", "SANTA MARÍA", 
+    "VILLA LUZURIAGA", "FLORIDA", "GREGORIO DE LAFERRERE")
+    )
 
-# Guardar datos modificado
-write_csv(barrios, file.path(ruta_input, "delitos_2019_2023.csv"))
+  # Creación de diccionario de las comunas con sus respectivos barrios
+diccionario_comunas <- tribble(
+  ~barrio, ~comuna_correcta,
+  "AGRONOMIA", 15,
+  "ALMAGRO", 5,
+  "BALVANERA", 3,
+  "BARRACAS", 4,
+  "BELGRANO", 13,
+  "BOEDO", 5,
+  "CABALLITO", 6,
+  "CHACARITA", 15,
+  "COGHLAN", 12,
+  "COLEGIALES", 13,
+  "CONSTITUCION", 1,
+  "FLORES", 7,
+  "FLORESTA", 10,
+  "LA BOCA", 4,
+  "LINIERS", 9,
+  "MATADEROS", 9,
+  "MONSERRAT", 1,
+  "MONTE CASTRO", 10,
+  "NUEVA POMPEYA", 4,
+  "NUNEZ", 13,
+  "PALERMO", 14,
+  "PARQUE AVELLANEDA", 9,
+  "PARQUE CHACABUCO", 7,
+  "PARQUE CHAS", 15,
+  "PARQUE PATRICIOS", 4,
+  "PATERNAL", 15,
+  "PUERTO MADERO", 1,
+  "RECOLETA", 2,
+  "RETIRO", 1,
+  "SAAVEDRA", 12,
+  "SAN CRISTOBAL", 3,
+  "SAN NICOLAS", 1,
+  "SAN TELMO", 1,
+  "VELEZ SARSFIELD", 10,
+  "VERSALLES", 10,
+  "VILLA CRESPO", 15,
+  "VILLA DEL PARQUE", 11,
+  "VILLA DEVOTO", 11,
+  "VILLA GRAL. MITRE", 11,
+  "VILLA LUGANO", 8,
+  "VILLA LURO", 10,
+  "VILLA ORTUZAR", 15,
+  "VILLA PUEYRREDON", 12,
+  "VILLA REAL", 10,
+  "VILLA RIACHUELO", 8,
+  "VILLA SANTA RITA", 11,
+  "VILLA SOLDATI", 8,
+  "VILLA URQUIZA", 12
+)
+
+  # Actualización de números de comuna
+delitos_actualizado <- delitos_estandarizado %>%
+  # Converción a mayúsculas para evitar problemas de case sensitivity
+  mutate(barrio = str_to_upper(barrio)) %>%
+  # Unificación con el diccionario
+  left_join(diccionario_comunas, by = "barrio") %>%
+  # Reemplazar la comuna original por la correcta
+  mutate(comuna = ifelse(is.na(comuna_correcta), comuna, comuna_correcta)) %>%
+  # Eliminar columna temporal
+  select(-comuna_correcta)
+
+
+# Guardar dataset transformado 
+write_csv(delitos_actualizado, file.path(ruta_input, "delitos_2019_2023.csv"))
+
+
+
