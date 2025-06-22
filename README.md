@@ -68,7 +68,11 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🔍 Cómo Navegar el Repositorio
 
-- Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output` y `/scripts`.
+- Los materiales están organizados en carpetas a partir de la siguiente estructura:
+  1. `/raw`: Archivos de datos sin procesar.
+  2. `/input`: Archivos de datos procesados y listos para el análisis
+  3. `/output`: Resultados generados (gráficos, estadísticas descriptivas y modelos de *Machine Learning*)
+  4. `/scripts`: Códigos utilizados en el trabajo.
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
