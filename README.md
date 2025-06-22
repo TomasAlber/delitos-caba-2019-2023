@@ -15,21 +15,21 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 ## 📐 Estructura del Dataset
 | Campo          | Tipo     | Descripción |
 |----------------|----------|-------------|
-| **id_mapa**    | integer  | ID único del registro |
+| **id_mapa**    | integer  | Identificador único |
 | **anio**       | date     | Año del evento |
 | **mes**        | string   | Mes del evento |
-| **dia**        | string   | Día de la semana |
-| **fecha**      | date     | Fecha completa (YYYY-MM-DD) |
-| **franja**     | integer  | Hora del día (0-23) |
-| **tipo_delito1**| string  | Tipo principal (Robo/Hurto) |
-| **subtipo_delito**| string | Variante específica |
-| **uso_arma**   | boolean  | ¿Se usó arma? (SI/NO) |
-| **uso_moto**   | boolean  | ¿Se usó moto? (SI/NO) |
-| **barrio**     | string   | Barrio de ocurrencia |
-| **comuna**     | integer  | Comuna (1-15) |
-| **latitud**    | string   | Coordenada latitudinal |
-| **longitud**   | string   | Coordenada longitudinal |
-| **cantidad**   | integer  | Conteo de eventos (normalmente 1) |
+| **dia**        | string   | Día de la semana en que ocurrió el evento |
+| **fecha**      | date     | Fecha exacta del evento (YYYY-MM-DD) |
+| **franja**     | integer  | Franja horario en la que ocurrió el evento (0-23) |
+| **tipo**| string  | Clasificación del tipo de delito |
+| **subtipo**| string | Subtipo del delito, más específico |
+| **uso_arma**   | boolean  | Indicador de uso de arma (SI/NO) |
+| **uso_moto**   | boolean  | Indicador de uso de moto en el evento (SI/NO) |
+| **barrio**     | string   | Barrio de ocurrencia del evento |
+| **comuna**     | integer  | Comuna de ocurrencia del evento (1-15) |
+| **latitud**    | string   | Latitud geográfica donde ocurrió el evento |
+| **longitud**   | string   | Longitud geográfica donde ocurrió el evento |
+| **cantidad**   | integer  | Número de eventos registrados en esa ubicación y fecha |
 
 
 ## 🗂️ Estructura del repositorio
