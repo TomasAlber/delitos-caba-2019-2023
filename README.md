@@ -29,7 +29,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 | **comuna**     | integer  | Comuna de ocurrencia del evento (1-15) |
 | ...            | ...      | ... |
 
-*(Tabla completa en [documentación técnica](https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42))*
+*(Tabla completa en [Campos del recurso](https://data.buenosaires.gob.ar/dataset/delitos/resource/dbec0c29-1ada-40df-b13c-75cf3013ca42))*
 
 
 ## 🗂️ Estructura del Repositorio
@@ -82,12 +82,12 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 📑 Acceso directo a la documentación principal
 
-- [Dataset original](/raw)
+- [Extracción de Dataset original](/raw)
   
-- [Base de datos procesada](/input)
+- [Base de datos Procesada](/input)
   
-- [Resultados generados](/output)
+- [Análisis Exploratorio y Resultados generados](/output)
 
-- [Scripts de procesamiento](/scripts)
+- [Scripts de Procesamiento](/scripts)
 
-- [Presentación final](/presentation)
+- [Presentación Final](/presentation)
