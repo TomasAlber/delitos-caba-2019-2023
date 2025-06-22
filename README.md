@@ -72,11 +72,11 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-## 📑 Accesos Directos a los Documentos Principales
+## 📑 Accesos Directos
 
 - [Extracción de Dataset original](/raw)
   
-- [Base de datos Procesada](/input)
+- [Base de Datos Procesada](/input)
   
 - [Análisis Exploratorio y Resultados generados](/output)
 
