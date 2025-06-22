@@ -3,7 +3,7 @@ Este repositorio de Github almacena el **análisis integral** de la base de dato
 
 Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de Machine Learning y la presentación final.
 
-## 🎓 Alumno
+## 🎓 Alumno a cargo
 - **Nombre completo**: Brandon Tomás Alberganti
 
 - **Número de registro**: 892.796
@@ -47,6 +47,27 @@ Su objetivo es documentar el proceso completo, desde la exploración inicial has
 - [Scripts de procesamiento](/scripts)
 
 - [Presentación final](/presentation)
+
+## ⚙️ Estructura del dataset
+
+| Campo          | Tipo     | Descripción |
+|----------------|----------|-------------|
+| **id_mapa**    | integer  | ID único del registro |
+| **anio**       | date     | Año del evento |
+| **mes**        | string   | Mes del evento |
+| **dia**        | string   | Día de la semana |
+| **fecha**      | date     | Fecha completa (YYYY-MM-DD) |
+| **franja**     | integer  | Hora del día (0-23) |
+| **tipo_delito1**| string  | Tipo principal (Robo/Hurto) |
+| **subtipo_delito**| string | Variante específica |
+| **uso_arma**   | boolean  | ¿Se usó arma? (SI/NO) |
+| **uso_moto**   | boolean  | ¿Se usó moto? (SI/NO) |
+| **barrio**     | string   | Barrio de ocurrencia |
+| **comuna**     | integer  | Comuna (1-15) |
+| **latitud**    | string   | Coordenada latitudinal |
+| **longitud**   | string   | Coordenada longitudinal |
+| **cantidad**   | integer  | Conteo de eventos (normalmente 1) |
+
 
 ## 📜 Fuente de Datos
 
