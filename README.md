@@ -48,7 +48,7 @@ Su objetivo es documentar el proceso completo, desde la exploración inicial has
 
 - [Presentación final](/presentation)
 
-## ⚙️ Estructura del dataset
+## 📐 Estructura del dataset
 
 | Campo          | Tipo     | Descripción |
 |----------------|----------|-------------|
