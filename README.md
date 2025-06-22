@@ -3,7 +3,7 @@
 ### 🎯 Objetivo
 Este repositorio de Github documenta el **análisis integral** de los delitos reportados en la Ciudad Autónoma de Buenos Aires entre 2019 y 2023 como parte del **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la **Facultad de Ciencias Económicas** de la **Universidad de Buenos Aires**. 
 
-Incluye el proceso completo desde EDA hasta modelos predictivos, con visualizaciones interactivas y presentación ejecutiva.
+Su objetivo es documentar el proceso completo, desde la exploración inicial hasta los resultados finales, incluyendo visualizaciones, modelos de *Machine Learning* y la presentación final.
 
 ## 📑 Fuente de Datos
 La información utilizada para la realización de este trabajo fue obtenida a través del portal de datos públicos de la **Subsecretaría de Investigación y Estadística Criminal** del **Ministerio de Seguridad de la Ciudad Autónoma de Buenos Aires**:
