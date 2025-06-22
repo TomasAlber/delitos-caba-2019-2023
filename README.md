@@ -1,4 +1,4 @@
-## 📌 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
+## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
 
 ### 🎯 Objetivo
 Este repositorio documenta el **análisis integral** de los delitos reportados en CABA (2019-2023), desarrollado como **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la Facultad de Ciencias Económicas (UBA). 
