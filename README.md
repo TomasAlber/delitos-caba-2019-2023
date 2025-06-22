@@ -74,7 +74,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 📑 Accesos Directos
 
-- [Extracción de Dataset original](/raw)
+- [Extracción del Dataset](/raw)
   
 - [Base de Datos Procesada](/input)
   
