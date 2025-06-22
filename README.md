@@ -78,7 +78,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
   
 - [Base de Datos Procesada](/input)
   
-- [Análisis Exploratorio y Resultados generados](/output)
+- [Análisis Exploratorio y Resultados Generados](/output)
 
 - [Scripts de Procesamiento](/scripts)
 
