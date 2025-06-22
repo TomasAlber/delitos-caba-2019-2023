@@ -74,14 +74,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 📧 Contacto: [tomasalberganti@gmail.com]()  
 🏛️ FCE-UBA - Ciencia de Datos para Economía y Negocios
 
-## 📌 Cómo Utilizar
-1. Clonar repositorio
-2. Instalar dependencias: `pip install -r requirements.txt`
-3. Ejecutar notebooks en orden numérico
-4. Consultar [guía rápida](/docs/quickstart.md) para visualizaciones
-
-
-## 🔍 ¿Cómo navegar el repositorio?
+## 🔍 Cómo navegar el repositorio
 
 - Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output` y `/scripts`.
 
