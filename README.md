@@ -46,14 +46,6 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 - 📝 **Informe técnico**: Conclusiones, metodología y hallazgos (opcional en Markdown/PDF).
 
-## 🛠️ Herramientas utilizadas
-
-- **Lenguajes**: Python (pandas, scikit-learn) o R (tidyverse, caret).
-
-- **Visualización**: Power BI/Tableau (opcional), Plotly, Folium (mapas).
-
-- **Control de versiones**: Git + GitHub.
-
 ## 🛠️ Stack Tecnológico
 - **Procesamiento**: Python (pandas, NumPy), R (tidyverse)
 - **Modelado**: scikit-learn, statsmodels
@@ -70,17 +62,17 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🎓 Responsable
 **Brandon Tomás Alberganti**  
-📝 Registro: 892.796  
+📝 Nro. Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com]()  
-🏛️ FCE-UBA - Ciencia de Datos para Economía y Negocios
+🏛️ Facultad de Ciencias Económicas - Universidad de Buenos Aires
 
-## 🔍 Cómo navegar el repositorio
+## 🔍 Cómo Navegar el Repositorio
 
 - Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output` y `/scripts`.
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
-## 📑 Acceso directo a la documentación principal
+## 📑 Accesos Directos a la Documentación Principal
 
 - [Extracción de Dataset original](/raw)
   
