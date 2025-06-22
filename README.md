@@ -10,7 +10,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 🔗 [Portal Buenos Aires Data - Delitos](https://data.buenosaires.gob.ar/dataset/delitos)  
 
-📆 Período cubierto: Enero 2019 - Diciembre 2023
+📆 Período de análisis: Enero 2019 - Diciembre 2023
 
 ## 📐 Estructura del Dataset
 | Campo          | Tipo     | Descripción |
