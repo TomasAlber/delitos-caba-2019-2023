@@ -4,10 +4,10 @@
 # Número de Registro: 892.796
 # Profesor: Nicolas Sidicaro
 
+# ==============================================================================
+# I. EXTRACCION DE DATOS DE DELITOS DE CABA DESDE EL PORTAL DE DATOS PÚBLICOS
+# ==============================================================================
 
-### Script para descargar los datos de delitos de CABA desde el portal de datos públicos
-
-# 1. Descarga de librerias requeridas -----------------------------------------------------
 library(httr)
 library(readr)
 library(purrr)
@@ -29,41 +29,25 @@ urls <- list(
 # 3. Función para descargar y procesar archivos -------------------------------------------
 descargar_delitos_csv <- function(url, año, destino) {
   archivo_final <- file.path(destino, paste0("delitos_", año, ".csv"))
-  archivo_temp <- file.path(destino, paste0("temp_", año, ".csv"))
   
   tryCatch({
-    # Descargar archivo
-    GET(url, write_disk(archivo_temp, overwrite = TRUE))
+    # Descargar archivo directamente
+    GET(url, write_disk(archivo_final, overwrite = TRUE))
     
-    # Nota: Se realiza un procesamiento especial para 2023 ya que en el sitio oficial de CABA este archivo no se encuentra separado por comas, sino por puntos y comas.
-    if (año == "2023") {
-      # Leer archivo con punto y coma
-      datos <- read_delim(archivo_temp, delim = ";", locale = locale(encoding = "UTF-8"))
-      
-      # Guardar con coma como separador
-      write_csv(datos, archivo_final)
-      file.remove(archivo_temp)
-    } else {
-      # Para otros años, simplemente renombrar el archivo descargado
-      file.rename(archivo_temp, archivo_final)
-    }
-    
-    # Verificar que el archivo final es válido
+    # Verificar que el archivo se descargó correctamente
     if (file.size(archivo_final) > 0) {
-      message(paste0("Datos del ", año, " procesados correctamente: ", archivo_final))
+      message(paste0("Datos del ", año, " descargados correctamente: ", archivo_final))
       return(TRUE)
     } else {
-      if (file.exists(archivo_final)) file.remove(archivo_final)
-      stop("Archivo resultante está vacío")
+      file.remove(archivo_final)
+      stop("Archivo descargado está vacío")
     }
   }, error = function(e) {
-    message(paste0("Error al procesar datos del ", año, ": ", e$message))
-    if (file.exists(archivo_temp)) file.remove(archivo_temp)
+    message(paste0("Error al descargar datos del ", año, ": ", e$message))
     if (file.exists(archivo_final)) file.remove(archivo_final)
     return(FALSE)
   })
 }
-
 # 4. Ejecución de descargas --------------------------------------------------------------------
 resultados <- imap(urls, ~descargar_delitos_csv(.x, .y, dir_raw))
 
@@ -96,4 +80,3 @@ validar_estructura <- function(archivo) {
 }
 
 resultados_validacion <- map_lgl(archivos_descargados, validar_estructura)
-
