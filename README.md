@@ -78,7 +78,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
   - `/raw`: Contiene la base de datos sin procesar que fue extraída del portal de datos públicos de CABA.
   - `/input`: Contiene base de datos procesada para la realización de los análisis de datos exploratorios y descriptivos.
   - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
-  - `/scripts`: Contiene los códigos utilizados en el proyectos, enumerados por órden de ejecución.
+  - `/scripts`: Contiene los códigos utilizados en el proyecto, enumerados por órden de ejecución.
   - `/presentation`: Contiene la presentación final en formato PDF.
 
 ## 📑 Listado de Accesos Directos
