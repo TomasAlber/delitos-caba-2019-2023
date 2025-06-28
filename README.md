@@ -60,23 +60,28 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 *(Detalles completos en [informe técnico](/reports/findings.md))*
 
-## 🎓 Responsable
+## 🎓 Responsables del Proyecto
 **Brandon Tomás Alberganti**  
 📝 Nro. de Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
+
+**Catalina Furman**  
+📝 Nro. de Registro: XXX.XXX  
+📧 Contacto: [catafurman@gmail.com](mailto:catafurman@gmail.com)  
+
+
 🏛️ Facultad de Ciencias Económicas - Universidad de Buenos Aires
 
 ## 🔍 Cómo Navegar el Repositorio
 
-- Los materiales están organizados en carpetas a partir de la siguiente estructura:
-  - `/raw`: Archivos de datos sin procesar.
-  - `/input`: Archivos de datos procesados y listos para el análisis.
-  - `/output`: Resultados generados (gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
-  - `/scripts`: Códigos utilizados en el trabajo.
+- Los materiales están organizados en carpetas que siguen la siguiente estructura:
+  - `/raw`: Contiene la base de datos sin procesar que fue extraída del portal de datos públicos de CABA.
+  - `/input`: Contiene base de datos procesada para la realización de los análisis de datos exploratorios y descriptivos.
+  - `/output`: Contiene los resultados generados en el proceso de análisis (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
+  - `/scripts`: Contiene los códigos utilizados en el proyectos, enumerados por órden de ejecución.
+  - `/presentation`: Contiene la presentación final en formato PDF.
 
-- La **presentación final** en formato PDF se encuentra en `/presentation`.
-
-## 📑 Accesos Directos
+## 📑 Listado de Accesos Directos
 
 - [Extracción del Dataset](/raw)
   
