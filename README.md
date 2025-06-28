@@ -34,9 +34,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🗂️ Estructura del Repositorio
 
-- 📄 **Presentación final**: Resumen visual en formato PPTX/PDF.
-
-- 📂 **Datos**: Bases originales y procesadas (CSV, JSON o formatos compatibles).
+- 📂 **Base de Datos**: Bases originales y procesadas (CSV, JSON o formatos compatibles).
 
 - 📊 **Análisis Exploratorio (EDA)**: Jupyter Notebooks o scripts (Python/R) con limpieza, estadísticas descriptivas y gráficos.
 
@@ -44,7 +42,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 - 📈 **Visualizaciones**: Gráficos interactivos (Plotly, Tableau) o estáticos (Matplotlib, Seaborn).
 
-- 📝 **Informe técnico**: Conclusiones, metodología y hallazgos (opcional en Markdown/PDF).
+- 📄 **Presentación final**: Presentación con conclusiones, metodología y hallazgos en formato PDF.
 
 ## 🛠️ Stack Tecnológico
 - **Procesamiento**: Python (pandas, NumPy), R (tidyverse)
