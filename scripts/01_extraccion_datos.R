@@ -78,5 +78,3 @@ validar_estructura <- function(archivo) {
     return(FALSE)
   })
 }
-
-resultados_validacion <- map_lgl(archivos_descargados, validar_estructura)

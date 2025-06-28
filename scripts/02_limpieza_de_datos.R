@@ -117,4 +117,3 @@ delitos <- delitos %>%
 
 # 6. Guardado del dataset final ---------------------------------------------------
 write_csv(delitos, file.path(ruta_input, "delitos_2019_2023.csv"))
-

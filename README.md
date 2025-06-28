@@ -10,7 +10,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 🔗 [Portal Buenos Aires Data - Delitos](https://data.buenosaires.gob.ar/dataset/delitos)  
 
-📆 Período cubierto: Enero 2019 - Diciembre 2023
+📆 Período de análisis: Enero 2019 - Diciembre 2023
 
 ## 📐 Estructura del Dataset
 | Campo          | Tipo     | Descripción |
@@ -62,19 +62,23 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🎓 Responsable
 **Brandon Tomás Alberganti**  
-📝 Nro. Registro: 892.796  
+📝 Nro. de Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
 🏛️ Facultad de Ciencias Económicas - Universidad de Buenos Aires
 
 ## 🔍 Cómo Navegar el Repositorio
 
-- Los códigos están organizados en carpetas por etapa:`/raw` , `/input` , `/output` y `/scripts`.
+- Los materiales están organizados en carpetas a partir de la siguiente estructura:
+  1. `/raw`: Archivos de datos sin procesar.
+  2. `/input`: Archivos de datos procesados y listos para el análisis.
+  3. `/output`: Resultados generados (gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
+  4. `/scripts`: Códigos utilizados en el trabajo.
 
 - La **presentación final** en formato PDF se encuentra en `/presentation`.
 
 ## 📑 Accesos Directos
 
-- [Extracción de Dataset original](/raw)
+- [Extracción del Dataset](/raw)
   
 - [Base de Datos Procesada](/input)
   

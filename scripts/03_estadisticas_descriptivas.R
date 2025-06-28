@@ -315,4 +315,3 @@ g1 <- delitos %>%
         panel.grid.major.x = element_blank(),
         plot.margin = margin(20, 20, 20, 20)
       )
-    
