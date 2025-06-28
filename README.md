@@ -12,7 +12,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 📆 Período de análisis: Enero 2019 - Diciembre 2023
 
-## 📐 Estructura del Dataset
+## 🗃️ Estructura del Dataset
 | Campo          | Tipo     | Descripción |
 |----------------|----------|-------------|
 | **id_mapa**    | integer  | Identificador único |
