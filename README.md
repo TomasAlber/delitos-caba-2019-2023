@@ -77,7 +77,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - Los materiales están organizados en carpetas que siguen la siguiente estructura:
   - `/raw`: Contiene la base de datos sin procesar que fue extraída del portal de datos públicos de CABA.
   - `/input`: Contiene base de datos procesada para la realización de los análisis de datos exploratorios y descriptivos.
-  - `/output`: Contiene los resultados generados en el proceso de análisis (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
+  - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
   - `/scripts`: Contiene los códigos utilizados en el proyectos, enumerados por órden de ejecución.
   - `/presentation`: Contiene la presentación final en formato PDF.
 
