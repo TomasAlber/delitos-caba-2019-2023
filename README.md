@@ -64,7 +64,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
 
 **Catalina Furman**  
-📝 Nro. de Registro: XXX.XXX  
+📝 Nro. de Registro: 910.465 
 📧 Contacto: [catafurman@gmail.com](mailto:catafurman@gmail.com)  
 
 
