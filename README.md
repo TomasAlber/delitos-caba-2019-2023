@@ -36,9 +36,9 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 - 📂 **Base de Datos**: Bases originales y procesadas (.csv).
 
-- 📊 **Análisis Exploratorio (EDA)**: Scripts (**R**) con limpieza, estadísticas descriptivas y gráficos.
+- 📊 **Análisis Exploratorio (EDA)**: Scripts (R) con limpieza, estadísticas descriptivas y gráficos.
 
-- 📈 **Visualizaciones**: Gráficos estáticos (**R**) e interactivos (**Power BI**).
+- 📈 **Visualizaciones**: Gráficos estáticos (R) e interactivos (Power BI).
 
 - 📄 **Presentación final**: Presentación con conclusiones, metodología y hallazgos en formato PDF.
 
