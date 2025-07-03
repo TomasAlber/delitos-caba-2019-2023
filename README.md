@@ -34,20 +34,17 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🗂️ Estructura del Repositorio
 
-- 📂 **Base de Datos**: Bases originales y procesadas (CSV, JSON o formatos compatibles).
+- 📂 **Base de Datos**: Bases originales y procesadas (.csv).
 
-- 📊 **Análisis Exploratorio (EDA)**: Jupyter Notebooks o scripts (Python/R) con limpieza, estadísticas descriptivas y gráficos.
+- 📊 **Análisis Exploratorio (EDA)**: Scripts (**R**) con limpieza, estadísticas descriptivas y gráficos.
 
-- 🤖 **Modelos**: Implementación de algoritmos (clustering, series temporales, etc.).
-
-- 📈 **Visualizaciones**: Gráficos interactivos (Plotly, Tableau) o estáticos (Matplotlib, Seaborn).
+- 📈 **Visualizaciones**: Gráficos estáticos (**R**) e interactivos (**Power BI**).
 
 - 📄 **Presentación final**: Presentación con conclusiones, metodología y hallazgos en formato PDF.
 
 ## 🛠️ Stack Tecnológico
-- **Procesamiento**: Python (pandas, NumPy), R (tidyverse)
-- **Modelado**: scikit-learn, statsmodels
-- **Visualización**: Plotly, Folium (mapas), Power BI
+- **Procesamiento**: R (*tidyverse, lubrydate, dplyr, ggmpap, ggplot2*)
+- **Visualización**: Power BI (*DAX, Powe Query*)
 - **Control de Versiones**: Git/GitHub
 
 ## 🔍 Hallazgos Clave
@@ -56,7 +53,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 3. Modelos predictivos con 85%+ de precisión
 4. Correlación entre variables contextuales
 
-*(Detalles completos en [informe técnico](/reports/findings.md))*
+*(Detalles completos en [informe técnico](/presentation))*
 
 ## 🎓 Responsables del Proyecto
 **Brandon Tomás Alberganti**  
@@ -75,7 +72,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - Los materiales están organizados en carpetas que siguen la siguiente estructura:
   - `/raw`: Contiene la base de datos sin procesar que fue extraída del portal de datos públicos de CABA.
   - `/input`: Contiene base de datos procesada para la realización de los análisis de datos exploratorios y descriptivos.
-  - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
+  - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y visualización en Power BI).
   - `/scripts`: Contiene los códigos utilizados en el proyecto, enumerados por órden de ejecución.
   - `/presentation`: Contiene la presentación final en formato PDF.
 
