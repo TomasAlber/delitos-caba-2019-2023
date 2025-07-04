@@ -43,8 +43,8 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - 📄 **Presentación final**: Presentación con conclusiones, metodología y hallazgos en formato PDF.
 
 ## 🛠️ Stack Tecnológico
-- **Procesamiento**: R (*tidyverse, lubrydate, dplyr, ggmpap, ggplot2*)
-- **Visualización**: Power BI (*DAX, Powe Query*)
+- **Procesamiento**: R (*tidyverse, lubrydate, dplyr*)
+- **Visualización**: R (*ggmpap, ggplot2*) y Power BI (*DAX, Powe Query*)
 - **Control de Versiones**: Git/GitHub
 
 ## 🔍 Hallazgos Clave
