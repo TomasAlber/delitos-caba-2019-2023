@@ -1,9 +1,9 @@
-## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
+![image](https://github.com/user-attachments/assets/04c8e867-fbb8-4eb1-99ce-bab3792b03ae)## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
 
 ### 🎯 Objetivo
 Este repositorio de Github documenta el **análisis integral** de los delitos reportados en la Ciudad Autónoma de Buenos Aires entre 2019 y 2023 como parte del **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la **Facultad de Ciencias Económicas** de la **Universidad de Buenos Aires**. 
 
-Este trabajo implementa un flujo completo de análisis, comenzando con la exploración y preparación de la base de datos que incluye limpieza, tratamiento de valores atípicos y transformación de variables. El análisis exploratorio se apoya en visualizaciones avanzadas para descubrir patrones temporales y distribuciones geográficas, mientras que el modelado predictivo emplea algoritmos de *Machine Learning* para series temporales, clasificación y clustering. Los resultados se presentan mediante dashboards interactivos y representaciones geoespaciales, junto con un documento final de presentación que incluye todo el abordaje de los análisis realizados.
+En primer lugar, este trabajo implementa un flujo completo de análisis, comenzando con la exploración y preparación de la base de datos que incluye limpieza, tratamiento de valores atípicos y transformación de variables. Por otro lado, el análisis exploratorio se apoya en visualizaciones avanzadas para descubrir patrones temporales y distribuciones geográficas, mientras que para la visualización de los resultados se presenta un *dashboard interactivo* en Power BI, el cual ofrece una representación visual de los datos para explorar los registros mediante filtros, segmentaciones y gráficos interactivos, facilitando la identificación de patrones y tendencias. Por último, el proyecto se acompaña con un documento final de presentación que incluye todo el abordaje de los análisis realizados.
 
 ## 📑 Fuente de Datos
 La información utilizada para la realización de este trabajo fue obtenida a través del portal de datos públicos de la **Subsecretaría de Investigación y Estadística Criminal** del **Ministerio de Seguridad de la Ciudad Autónoma de Buenos Aires**:
@@ -47,16 +47,8 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - **Visualización**: R (*ggmpap, ggplot2*) y Power BI (*DAX, Powe Query*)
 - **Control de Versiones**: Git/GitHub
 
-## 🔍 Hallazgos Clave
-1. Patrones temporales en frecuencia de delitos
-2. Hotspots geográficos identificados
-3. Modelos predictivos con 85%+ de precisión
-4. Correlación entre variables contextuales
-
-*(Detalles completos en [informe técnico](/presentation))*
-
 ## 🎓 Responsables del Proyecto
-**Brandon Tomás Alberganti**  
+**Tomás Alberganti**  
 📝 Nro. de Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
 
