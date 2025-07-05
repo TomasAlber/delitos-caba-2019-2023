@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/04c8e867-fbb8-4eb1-99ce-bab3792b03ae)## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
+## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023) ##
 
 ### 🎯 Objetivo
 Este repositorio de Github documenta el **análisis integral** de los delitos reportados en la Ciudad Autónoma de Buenos Aires entre 2019 y 2023 como parte del **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la **Facultad de Ciencias Económicas** de la **Universidad de Buenos Aires**. 
