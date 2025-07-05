@@ -1,9 +1,9 @@
-## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023)
+## 📊 Análisis de Delitos en la Ciudad Autónoma de Buenos Aires (2019-2023) ##
 
 ### 🎯 Objetivo
 Este repositorio de Github documenta el **análisis integral** de los delitos reportados en la Ciudad Autónoma de Buenos Aires entre 2019 y 2023 como parte del **Trabajo Final** para la materia *Ciencia de Datos para Economía y Negocios* de la **Facultad de Ciencias Económicas** de la **Universidad de Buenos Aires**. 
 
-Este trabajo implementa un flujo completo de análisis, comenzando con la exploración y preparación de la base de datos que incluye limpieza, tratamiento de valores atípicos y transformación de variables. El análisis exploratorio se apoya en visualizaciones avanzadas para descubrir patrones temporales y distribuciones geográficas, mientras que el modelado predictivo emplea algoritmos de *Machine Learning* para series temporales, clasificación y clustering. Los resultados se presentan mediante dashboards interactivos y representaciones geoespaciales, junto con un documento final de presentación que incluye todo el abordaje de los análisis realizados.
+En primer lugar, este trabajo implementa un flujo completo de análisis, comenzando con la exploración y preparación de la base de datos que incluye limpieza, tratamiento de valores atípicos y transformación de variables. Por otro lado, el análisis exploratorio se apoya en visualizaciones avanzadas para descubrir patrones temporales y distribuciones geográficas, mientras que para la visualización de los resultados se presenta un *dashboard interactivo* en Power BI, el cual ofrece una representación visual de los datos para explorar los registros mediante filtros, segmentaciones y gráficos interactivos, facilitando la identificación de patrones y tendencias. Por último, el proyecto se acompaña con un documento final de presentación que incluye todo el abordaje de los análisis realizados.
 
 ## 📑 Fuente de Datos
 La información utilizada para la realización de este trabajo fue obtenida a través del portal de datos públicos de la **Subsecretaría de Investigación y Estadística Criminal** del **Ministerio de Seguridad de la Ciudad Autónoma de Buenos Aires**:
@@ -34,32 +34,21 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 
 ## 🗂️ Estructura del Repositorio
 
-- 📂 **Base de Datos**: Bases originales y procesadas (CSV, JSON o formatos compatibles).
+- 📂 **Base de Datos**: Bases originales y procesadas (.csv).
 
-- 📊 **Análisis Exploratorio (EDA)**: Jupyter Notebooks o scripts (Python/R) con limpieza, estadísticas descriptivas y gráficos.
+- 📊 **Análisis Exploratorio (EDA)**: Scripts (R) con limpieza, estadísticas descriptivas y gráficos.
 
-- 🤖 **Modelos**: Implementación de algoritmos (clustering, series temporales, etc.).
-
-- 📈 **Visualizaciones**: Gráficos interactivos (Plotly, Tableau) o estáticos (Matplotlib, Seaborn).
+- 📈 **Visualizaciones**: Gráficos estáticos (R) e interactivos (Power BI).
 
 - 📄 **Presentación final**: Presentación con conclusiones, metodología y hallazgos en formato PDF.
 
 ## 🛠️ Stack Tecnológico
-- **Procesamiento**: Python (pandas, NumPy), R (tidyverse)
-- **Modelado**: scikit-learn, statsmodels
-- **Visualización**: Plotly, Folium (mapas), Power BI
+- **Procesamiento**: R (*tidyverse, lubrydate, dplyr*)
+- **Visualización**: R (*ggmpap, ggplot2*) y Power BI (*DAX, Powe Query*)
 - **Control de Versiones**: Git/GitHub
 
-## 🔍 Hallazgos Clave
-1. Patrones temporales en frecuencia de delitos
-2. Hotspots geográficos identificados
-3. Modelos predictivos con 85%+ de precisión
-4. Correlación entre variables contextuales
-
-*(Detalles completos en [informe técnico](/reports/findings.md))*
-
 ## 🎓 Responsables del Proyecto
-**Brandon Tomás Alberganti**  
+**Tomás Alberganti**  
 📝 Nro. de Registro: 892.796  
 📧 Contacto: [tomasalberganti@gmail.com](mailto:tomasalberganti@gmail.com)  
 
@@ -75,7 +64,7 @@ La información utilizada para la realización de este trabajo fue obtenida a tr
 - Los materiales están organizados en carpetas que siguen la siguiente estructura:
   - `/raw`: Contiene la base de datos sin procesar que fue extraída del portal de datos públicos de CABA.
   - `/input`: Contiene base de datos procesada para la realización de los análisis de datos exploratorios y descriptivos.
-  - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y modelos de *Machine Learning*).
+  - `/output`: Contiene los resultados generados (*i.e.*, gráficos, estadísticas descriptivas y visualización en Power BI).
   - `/scripts`: Contiene los códigos utilizados en el proyecto, enumerados por órden de ejecución.
   - `/presentation`: Contiene la presentación final en formato PDF.
 
