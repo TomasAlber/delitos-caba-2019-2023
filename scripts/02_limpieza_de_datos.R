@@ -1,7 +1,6 @@
 ## Trabajo Final de "Ciencia de Datos para Economía y Negocios"
 ## Facultad de Ciencias Económicas - Universidad de Buenos Aires
-# Alumno: Tomas Alberganti
-# Número de Registro: 892.796
+# Alumnos: Tomas Alberganti - Catalina Furman
 # Profesor: Nicolas Sidicaro
 
 # ==============================================================================
@@ -16,7 +15,7 @@ library(readr)
 library(lubridate)
 
 # Definición de rutas
-ruta_base <- "C:/Users/Tomas/Documents/GitHub/delitos-caba-2019-2023"
+ruta_base <- here()
 ruta_raw <- file.path(ruta_base, "raw")
 ruta_input <- file.path(ruta_base, "input")
 ruta_output <- file.path(ruta_base, "output")
@@ -84,12 +83,7 @@ delitos <- map(archivos, ~{
   mutate(
     fecha = as.Date(fecha),
     anio = year(fecha),
-    mes = factor(mes, levels = c("ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO",
-                                 "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE")),
-    dia = factor(dia, levels = c("LUNES", "MARTES", "MIERCOLES", "JUEVES", 
-                                 "VIERNES", "SABADO", "DOMINGO")),
-    uso_arma = ifelse(uso_arma == "SI", TRUE, FALSE),
-    uso_moto = ifelse(uso_moto == "SI", TRUE, FALSE),
+    franja = as.integer(franja),
     latitud = as.numeric(latitud),
     longitud = as.numeric(longitud)
   ) %>%
@@ -110,6 +104,7 @@ delitos <- delitos %>%
   
   # Eliminación de datos con información erróneamente incompleta
   filter(
+    !is.na(franja),                                  # Eliminar NA
     !barrio %in% c("0", "NULL", "NO ESPECIFICADA", "SD", "Sin geo"),  # Valores específicos
     !is.na(barrio),                                  # Eliminar NA
     barrio != "",                                    # Eliminar strings vacíos
