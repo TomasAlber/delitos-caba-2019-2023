@@ -7,7 +7,8 @@
 # III. ANÁLISIS EXPLORATORIO (EDA)
 # ==============================================================================
 
-# Cargar librerías necesarias
+# 1. Descarga de librerias requeridas -----------------------------------------------------
+
 library(tidyverse)
 library(sf)
 library(stringr)
@@ -57,7 +58,7 @@ ggplot(mapa_barrios_datos) +
   )
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/mapa_calor_delitos.png", width = 10, height = 8)
+ggsave("output/01. Mapa de calor de delitos.png", width = 10, height = 8)
 
 
 # ================================
@@ -105,11 +106,13 @@ grafico_franja <- ggplot(delitos_franja, aes(x = franja_grupo, y = n)) +
 print(grafico_franja)
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/delitos_por_franja.png", width = 8, height = 6)
+ggsave("output/02. Delitos por franja horaria.png", width = 8, height = 6)
 
 # ================================
 # Gráfico 3: Delitos por año
 # ================================
+delitos_anio <- delitos %>%
+  count(anio) 
 
 grafico_anio <- ggplot(delitos_anio, aes(x = anio, y = n)) +
   geom_col(fill = "steelblue") +
@@ -133,7 +136,7 @@ grafico_anio <- ggplot(delitos_anio, aes(x = anio, y = n)) +
 print(grafico_anio)
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/delitos_por_anio.png", grafico_anio, width = 8, height = 6)
+ggsave("output/03. Delitos por año.png", grafico_anio, width = 8, height = 6)
 
 # ================================
 # Gráfico 4: Delitos por día de la semana
@@ -166,12 +169,20 @@ ggplot(delitos_dia, aes(x = dia, y = n, group = 1)) +
   )
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/delitos_por_dia_linea.png", width = 8, height = 6)
+ggsave("output/04. Grafico de delitos por dia.png", width = 8, height = 6)
 
 # ================================
 # Gráfico 5: Delitos por mes
 # ================================
-
+# Dataframe con el conteo por mes
+delitos_mes <- delitos %>%  
+  count(mes) %>%  
+  mutate(
+    mes = factor(mes, 
+                 levels = c("ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", 
+                            "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"),
+                 ordered = TRUE)
+  )
 ggplot(delitos_mes, aes(x = mes, y = n, group = 1)) +
   geom_line(color = "steelblue", size = 1.2) +
   geom_point(color = "steelblue", size = 3) +
@@ -180,7 +191,8 @@ ggplot(delitos_mes, aes(x = mes, y = n, group = 1)) +
     vjust = -0.6, size = 3.5
   ) +
   scale_y_continuous(
-    breaks = seq(0, 60000, by = 20000),
+    limits = c(40000, NA),
+    breaks = seq(20000, 60000, by = 10000),
     labels = scales::label_number(big.mark = ".", decimal.mark = ","),
     expand = expansion(mult = c(0, 0.08))  # ← Agrega margen arriba sin vaciar el gráfico
   ) +
@@ -197,7 +209,7 @@ ggplot(delitos_mes, aes(x = mes, y = n, group = 1)) +
   )
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/delitos_por_mes_linea.png", width = 9, height = 7)
+ggsave("output/05. Grafico de delitos por mes.png", width = 8, height = 6)
 
 # ================================
 # Gráfico 6: Delitos por tipo
@@ -206,7 +218,7 @@ ggsave("output/delitos_por_mes_linea.png", width = 9, height = 7)
 delitos_tipo <- delitos %>%
   count(tipo_delito1, sort = TRUE)
 
-ggplot(delitos_tipo, aes(x = tipo_delito1, y = n)) +
+grafico_delitos_tipo <- ggplot(delitos_tipo, aes(x = tipo_delito1, y = n)) +
   geom_col(fill = "steelblue", width = 0.7) +
   geom_text(
     aes(label = scales::comma(n)),
@@ -229,7 +241,7 @@ ggplot(delitos_tipo, aes(x = tipo_delito1, y = n)) +
   )
 
 # Guardar el gráfico como imagen para la presentación
-ggsave("output/delitos_por_tipo_etiquetas.png", width = 9, height = 6)
+ggsave("output/06. Grafico de tipos de delitos.jpg", plot = grafico_delitos_tipo, width = 9, height = 7)
 
 # ================================
 # Gráfico 7: Tipos de Robo
@@ -239,6 +251,17 @@ ggsave("output/delitos_por_tipo_etiquetas.png", width = 9, height = 6)
 robos_modalidad <- delitos %>%
   filter(tipo_delito1 == "Robo") %>%
   mutate(
+    uso_arma = case_when(
+      uso_arma == "SI" ~ TRUE,
+      uso_arma == "NO" ~ FALSE,
+      TRUE ~ NA  # Para NA u otros valores no esperados
+    ),
+    # Convertir "SI"/"NO" a TRUE/FALSE para uso_moto
+    uso_moto = case_when(
+      uso_moto == "SI" ~ TRUE,
+      uso_moto == "NO" ~ FALSE,
+      TRUE ~ NA  # Para NA u otros valores no esperados
+    ),
     modalidad = case_when(
       uso_arma & uso_moto ~ "Con arma y moto",
       uso_arma & !uso_moto ~ "Solo arma",
@@ -270,7 +293,7 @@ grafico_modalidad_robos <- ggplot(robos_modalidad, aes(x = modalidad, y = porcen
 
 # Guardar el gráfico como imagen para la presentación
 print(grafico_modalidad_robos)
-ggsave("output/modalidad_robos_arma_moto.png", grafico_modalidad_robos, width = 9, height = 6)
+ggsave("output/07. Grafico de modalidades de robo.png", width = 8, height = 6)
 
 # ================================
 # Gráfico 8: Mapa de Calor por día y hora
@@ -316,4 +339,4 @@ grafico_heatmap <- ggplot(delitos %>% count(dia, franja_grupo),
 
 # Guardar el gráfico como imagen para la presentación
 print(grafico_heatmap)
-ggsave("output/heatmap_dia_franja.png", grafico_heatmap, width = 9, height = 6)
+ggsave("output/08. Mapa de calor por dia y hora.png", width = 8, height = 6)

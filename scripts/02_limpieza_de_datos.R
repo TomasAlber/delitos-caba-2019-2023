@@ -12,6 +12,7 @@
 # 1. Descarga de librerias requeridas -----------------------------------------------------
 library(tidyverse)
 library(readr)
+library(here)
 library(lubridate)
 
 # Definición de rutas
